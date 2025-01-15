@@ -1,0 +1,86 @@
+html{
+    background-color: black;
+}
+
+.tommyIMG{
+    width: 90rem;
+    border-radius: 1rem;
+    display: none;
+}
+
+.tommyIMGVisible{
+    display: initial;
+    animation: slowReveal;
+    animation-duration: 4s;
+}
+
+.tommyIMGInvisible{
+    display: initial;
+    animation-fill-mode: forwards;
+    animation-name: slowInvisible;
+    animation-duration: 2s;
+
+}
+
+.flexContainer{
+    margin: 0;
+    text-align: center;
+    
+}
+
+.gifSection{
+    margin-top: 6rem;
+    text-align: center;
+    display:none;
+}
+
+
+.gifVisible{
+    display: Block;
+    animation-name: slowReveal;
+    animation-duration: 4s;
+}
+
+.gifInvisible{
+    display: Block;
+    animation-name: slowInvisible;
+    animation-fill-mode: forwards;
+    animation-duration: 4s;
+}
+
+.ClickMe{
+    color: white;
+    text-align: center;
+    margin-top: 12rem;
+    cursor: pointer;
+    font-style: italic;
+    animation: slowReveal;
+    animation-duration: 3s;
+}
+
+.ClickMe:hover{
+    color: rgb(247, 219, 36)
+
+}
+
+@keyframes slowReveal {
+    from {opacity: 0;}
+    to{opacity: 1;}
+}
+
+@keyframes slowInvisible{
+    from{opacity: 1}
+    to{opacity:0};
+}
+
+@media only screen and (max-width: 400px) and (max-height: 850px) {
+    /* Styles for small mobile screens similar to 375x812 */
+    .tommyIMG{
+        width: 83rem;
+        transform: translateX(-41rem);
+        border-radius: 1rem;
+    }
+    .gif{
+        transform: translateX(-8rem);
+    }
+}
